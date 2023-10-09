@@ -127,7 +127,7 @@
                 .filter((room) => room.type === "SALLE DE COURS")
                 .filter((room) => freeRooms.includes(room.name));
 
-            document.getElementById('result').innerText = filteredRooms.map((room) => room.name + ' (' + Math.ceil(room.distance * 1000) + 'm)').join('\n');
+            document.getElementById('result').innerHTML = filteredRooms.map((room) => '<a href="https://occupancy.epfl.ch/'+room.name+'" target="_blank">'+room.name + '</a> (' + Math.ceil(room.distance * 1000) + 'm)').join('<br>');
         }
 
         function onError(error) {
