@@ -40,6 +40,11 @@
     <p id="pos"></p>
     <p id="result"></p>
 
+    <div>
+        <br<
+        <p>Made by <a href="https://github.com/Androz2091">Simon Lefort</a> et hébergé par PolySource. Merci à <a href="https://github.com/antoninfaure">Antonin Faure</a></p>
+    </div>
+
     <script src="./rooms-coordinates.js"></script>
     <script>
         function showLoc() {
@@ -94,7 +99,7 @@
             end.setMinutes(0, 0, 0);
             start.setMinutes(0, 0, 0);
 
-            fetch('https://corsproxy.io/?' + encodeURIComponent('https://occupancy-backend-e150a8daef31.herokuapp.com/api/rooms/find_free_rooms'), {
+            fetch('https://occupancy-backend-e150a8daef31.herokuapp.com/api/rooms/find_free_rooms'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
